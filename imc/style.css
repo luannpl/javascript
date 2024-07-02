@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: end; */
+    align-items: center;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin: 4px 0;
+    /* text-align: start; */
+}
+
+input{
+ width: 300px;
+}
+
+.btn{
+    width: 300px;
+    border: none;
+    margin-top: 4px;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(48, 80, 80);
+    color: #fff;
+    transition: 0.4s;
+}
+
+.btn:hover{
+    background-color: rgb(133, 131, 131);
+    color: #000;
+    transition: 0.4s;
+
+}
+.section-resultado{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+#resultado{
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    width: 300px;
+    border-radius: 4px;
+
+    padding: 8px;
+    /* display: none; */
+}
