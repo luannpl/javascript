@@ -49,6 +49,7 @@ function logar() {
     senha();
   }
 }
+
 // for (var x = 0; x < 4; x++) {
 //   let emailLogin = prompt("Digite seu email:");
 //   if(emailLogin != emailCadastrado){
