@@ -47,10 +47,10 @@ input{
     justify-content: center;
     margin-top: 10px;
 }
-#resultado{
+.resultado{
     text-align: center;
-    background-color: #000;
-    color: #fff;
+    /* background-color: #000; */
+    color: #000;
     width: 300px;
     border-radius: 4px;
 
