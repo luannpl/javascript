@@ -1,0 +1,52 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-main{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: darkcyan;
+    padding: 20px;
+    border-radius: 16px;
+
+}
+
+.inputs{
+    margin-bottom: 10px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    border: none;
+}
+.inputs:focus{
+    outline: transparent;
+}
+
+#op{
+    margin-bottom: 10px;
+    padding: 6px;
+}
+#op:focus{
+    outline: transparent;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid  rgb(61, 87, 87);
+    background-color: #fff;
+    color:  rgb(61, 87, 87);
+
+}
+
+.btn:hover{
+    background-color:  rgb(61, 87, 87);
+    border-color: #000;
+    color: #fff;
+}
