@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assícrono</title>
+</head>
+<body>
+     <script>
+    // let timeout = setTimeout(function(){
+    //         document.body.style.backgroundColor = "blue"
+    //     }, 5000)
+
+    // setTimeout (function(){
+    //     clearTimeout(timeout)
+    //     console.log("parou")
+    // },3000)
+
+    let carros = [
+          {nome: "Uno com escada", velocidade: 20, distancia:0},
+          {nome: "Relampago marquinhos", velocidade: 5, distancia:0},
+          {nome: "Carro do danone", velocidade: 2, distancia:0}  
+    ]
+
+    function start(){
+        let vencedor;
+        for(let i = 0; i<carros.length;i++){
+            let carro = carros[i];
+            carro.distancia += carro.velocidade;
+            console.log("Carro "+carro.nome+" andou "+carro.distancia)
+            if(!vencedor){
+                vencedor = carro.nome;
+                break;
+            }
+        }
+
+        if(vencedor){
+            clearInterval(intervalo);
+            console.log("Carro "+vencedor+" ganhou")
+        }
+    }
+
+    var intervalo = setInterval(start,2000)
+    start();
+    </script>
+</body>
+</html>
