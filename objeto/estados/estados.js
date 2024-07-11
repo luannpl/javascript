@@ -270,27 +270,29 @@ let ufs = [
     },
   },
 ];
-let sul = 0;
-function estadosSul() {
-  for (let i = 0; i < ufs.length; i++) {
-    if (ufs[i].regiao.id == 4) {
-      sul++;
-    }
-  }
-  console.log(sul);
-}
 
-estadosSul();
+export default ufs;
+// let sul = 0;
+// function estadosSul() {
+//   for (let i = 0; i < ufs.length; i++) {
+//     if (ufs[i].regiao.id == 4) {
+//       sul++;
+//     }
+//   }
+//   console.log(sul);
+// }
 
-let nordeste = [];
-function estadosNordeste() {
-  for (let i = 0; i < ufs.length; i++) {
-    if (ufs[i].regiao.id == 2) {
-      // nordeste += ufs[i].nome +", ";
-       nordeste.push(ufs[i].nome);
-    }
-  }
-  console.log(nordeste.join( ", "));
-}
+// estadosSul();
 
-estadosNordeste();
+// let nordeste = [];
+// function estadosNordeste() {
+//   for (let i = 0; i < ufs.length; i++) {
+//     if (ufs[i].regiao.id == 2) {
+//       // nordeste += ufs[i].nome +", ";
+//        nordeste.push(ufs[i].nome);
+//     }
+//   }
+//   console.log(nordeste.join( ", "));
+// }
+
+// estadosNordeste();
