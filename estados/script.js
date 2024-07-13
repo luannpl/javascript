@@ -15,7 +15,13 @@ for (let i = 0; i < ufs.length; i++) {
   tagLi.addEventListener("click", function () {
     alert(`Estado: ${ufs[i].nome}, Região: ${ufs[i].regiao.nome}`);
   });
+
+
+  tagLi.addEventListener("dblclick", )
 }
+
+
+
 
 // let chave =0;
 // let interval = setInterval(function(){
