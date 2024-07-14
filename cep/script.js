@@ -1,18 +1,30 @@
-let cep = prompt("Digite o cep: ")
-const url = `https://viacep.com.br/ws/${cep}/json/`;
+let botao = document.getElementById("botaoClique");
+let modal = document.getElementById("modal")
+botao.addEventListener("click", consultarCep)
 
 async function consultarCep(){
-    const response = await fetch(url);
-    const data = await response.json();
+    let cep = Number(document.getElementById('cep').value);
+    const url = `https://viacep.com.br/ws/${cep}/json/`;
+    let response = await fetch(url);
+    let data = await response.json();
+
+    if(data.localidade === undefined && data.uf === undefined){
+        modal.innerHTML = "Endereço não encontrado"
+    }
+    else{
+
+        modal.innerHTML = `
+        <ul>
+        <li>Rua: ${data.logradouro}</li>
+         <li class="item-conteudo">Bairro: ${data.bairro}</li>
+         <li class="item-conteudo">Cidade: ${data.localidade}</li>
+         <li class="item-conteudo">Estado: ${data.uf}</li>
     
-    let carde = document.getElementById("card")   
-     console.log(data)
-    carde.innerHTML += 
-    `<div class="conteudo"> <ul class="lista-conteudo">
-    <li class="item-conteudo">Rua: ${data.logradouro}</li>
-    <li class="item-conteudo">Bairro: ${data.bairro}</li>
-    <li class="item-conteudo">Cidade: ${data.localidade}</li>
-    <li class="item-conteudo">Estado: ${data.uf}</li>
-    </ul>`
-};
-consultarCep();
+        
+        </ul>`
+    }
+
+    
+}
+
+consultarCep()
