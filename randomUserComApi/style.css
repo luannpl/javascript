@@ -1,0 +1,30 @@
+body{
+    background-color: aqua;
+}
+
+.lista-infos{
+    list-style: none;
+}
+
+#lista-usuarios{
+    display: flex;
+    gap: 40px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    width: 300px;
+    border: 2px solid aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgb(57, 55, 100);
+    color: aliceblue;
+    
+}
+
+.card-img-top{
+    border-radius: 50%;
+}

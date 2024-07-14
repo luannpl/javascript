@@ -1,15 +1,4 @@
-// const url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
-
-// async function fetchEstados(){
-//     const response = await fetch(url)
-//     const data = await response.json()
-//     console.log(data)
-//     console.log(data[0].regiao.nome)
-// }
-// fetchEstados()
-
-
-let qtd = prompt("Digite a quantidade de cards: ")
+let qtd = prompt("Digite o número de cards: ");
 const url = 'https://randomuser.me/api/?results='+qtd;
 
 async function randomuser(){
@@ -26,8 +15,10 @@ async function randomuser(){
         <div class="card">
         <img src="${data.results[i].picture.large}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title"><ul class="lista-infos"><li class="lista-items">Nome: ${data.results[i].name.title} ${data.results[i].name.first} ${data.results[i].name.last}</li>
-          <li class="lista-items">País: ${data.results[i].location.country}</li>
+          <h5 class="card-title"><ul class="lista-infos">
+          <li class="lista-items">${data.results[i].name.title} ${data.results[i].name.first} ${data.results[i].name.last}</li>
+          <li class="lista-items">${data.results[i].location.country}</li>
+
           </ul>
           </h5>
     
