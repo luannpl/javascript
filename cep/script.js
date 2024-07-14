@@ -1,5 +1,8 @@
 let botao = document.getElementById("botaoClique");
 let modal = document.getElementById("modal")
+let botaoLimpar = document.getElementById("botao-limpar");
+let inputCep = document.getElementById("cep");
+
 botao.addEventListener("click", consultarCep)
 
 async function consultarCep(){
@@ -22,9 +25,11 @@ async function consultarCep(){
     
         
         </ul>`
-    }
-
-    
+    }  
 }
 
-consultarCep()
+botaoLimpar.addEventListener("click", limpar)
+function limpar(){
+    inputCep.value = ""
+    inputCep.focus();
+}
